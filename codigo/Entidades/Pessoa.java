@@ -49,4 +49,8 @@ public abstract class Pessoa {
                 ", nascimento=" + nascimento +
                 '}';
     }
+
+    public void nomeEhGrande(String nome) {
+      System.out.println("\nO nome " + nome + " tem " + nome.length() + " caracteres.\n");
+    }
 }
