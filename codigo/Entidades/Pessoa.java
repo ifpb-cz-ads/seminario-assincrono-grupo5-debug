@@ -6,6 +6,8 @@ public abstract class Pessoa {
     private String nome;
     private String cpf;
     private LocalDate nascimento;
+    private String sexo;
+    private int idade;
 
     public Pessoa(String nome, String cpf, LocalDate nascimento) {
         this.nome = nome;
@@ -40,6 +42,24 @@ public abstract class Pessoa {
     public void setNascimento(LocalDate nascimento) {
         this.nascimento = nascimento;
     }
+
+    public int getIdade() {
+        return this.dade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getSexo() {
+        return nome;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+
 
     @Override
     public String toString() {
