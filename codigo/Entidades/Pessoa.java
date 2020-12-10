@@ -15,10 +15,6 @@ public abstract class Pessoa {
         this.nascimento = nascimento;
     }
 
-    public Pessoa() {
-
-    }
-
     public String getNome() {
         return nome;
     }
@@ -44,7 +40,7 @@ public abstract class Pessoa {
     }
 
     public int getIdade() {
-        return this.dade;
+        return this.idade;
     }
 
     public void setIdade(int idade) {

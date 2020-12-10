@@ -1,5 +1,5 @@
 package Dao;
-import Entidades.Paciente;
+import Entidades.NovoPaciente;
 import Interface.IntefacePaciente;
 
 import java.io.*;
@@ -25,20 +25,20 @@ public class DaoPaciente implements  IntefacePaciente{
     }
 
     @Override
-    public boolean addPaciente(Paciente paciente) throws IOException, ClassNotFoundException{
+    public boolean addPaciente(NovoPaciente paciente) throws IOException, ClassNotFoundException{
 
-        List<Paciente> listaPaciente;
+        List<NovoPaciente> listaPaciente;
 
         if (arquivo.length() > 0) {
             ObjectInputStream in = new ObjectInputStream(
                     new FileInputStream(arquivo));
 
-            listaPaciente = (List<Paciente>) in.readObject();
+            listaPaciente = (List<NovoPaciente>) in.readObject();
         } else {
             listaPaciente = new ArrayList<>();
         }
 
-        for(Paciente p : listaPaciente){
+        for(NovoPaciente p : listaPaciente){
             if(p.getCpf().equals(paciente.getCpf())){
                 return false;
             }
@@ -61,13 +61,13 @@ public class DaoPaciente implements  IntefacePaciente{
     @Override
     public boolean RemovePaciente(String cpf) throws IOException, ClassNotFoundException{
 
-        List<Paciente> listaPaciente;
+        List<NovoPaciente> listaPaciente;
 
         if (arquivo.length() > 0) {
             ObjectInputStream in = new ObjectInputStream(
                     new FileInputStream(arquivo));
 
-            listaPaciente = (List<Paciente>) in.readObject();
+            listaPaciente = (List<NovoPaciente>) in.readObject();
         } else {
             return false;
         }
@@ -88,14 +88,14 @@ public class DaoPaciente implements  IntefacePaciente{
     }
 
     @Override
-    public boolean atualizarPaciente(String cpf, Paciente paciente) throws IOException, ClassNotFoundException{
-        List<Paciente> listaPaciente;
+    public boolean atualizarPaciente(String cpf, NovoPaciente paciente) throws IOException, ClassNotFoundException{
+        List<NovoPaciente> listaPaciente;
 
         if (arquivo.length() > 0) {
             ObjectInputStream in = new ObjectInputStream(
                     new FileInputStream(arquivo));
 
-            listaPaciente = (List<Paciente>) in.readObject();
+            listaPaciente = (List<NovoPaciente>) in.readObject();
         } else {
             listaPaciente = new ArrayList<>();
         }
@@ -119,8 +119,8 @@ public class DaoPaciente implements  IntefacePaciente{
     }
 
     @Override
-    public Paciente buscarPacienteCpf(String cpf) throws IOException, ClassNotFoundException{
-        for(Paciente p : listarPaciente()){
+    public NovoPaciente buscarPacienteCpf(String cpf) throws IOException, ClassNotFoundException{
+        for(NovoPaciente p : listarPaciente()){
             if(p.getCpf().equals(cpf))
                 return p;
         }
@@ -128,12 +128,12 @@ public class DaoPaciente implements  IntefacePaciente{
     }
 
     @Override
-    public List<Paciente> listarPaciente() throws IOException, ClassNotFoundException{
+    public List<NovoPaciente> listarPaciente() throws IOException, ClassNotFoundException{
         if (arquivo.length() > 0) {
             ObjectInputStream in = new ObjectInputStream(
                     new FileInputStream(arquivo));
 
-            return (List<Paciente>) in.readObject();
+            return (List<NovoPaciente>) in.readObject();
         } else {
             return new ArrayList<>();
         }

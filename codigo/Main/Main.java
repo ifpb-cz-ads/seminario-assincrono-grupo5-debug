@@ -1,14 +1,13 @@
 
-package codigo.Main;
+//package codigo.Main;
 
-import Entidades.Paciente;
 
-public class Main {
-    public static void main(String[] args) {
-        Paciente p = new Paciente();
+//public class Main {
+    //public static void main(String[] args) {
+        //Paciente p = new Paciente();
         
-        p.setSintomas("Falta de ar, tosse seca, febre, cansaço, perda de paladar ou olfato.");
+       // p.setSintomas("Falta de ar, tosse seca, febre, cansaço, perda de paladar ou olfato.");
         
-        System.out.println("fim");
-    }
-}
+        //System.out.println("fim");
+    //}
+//}

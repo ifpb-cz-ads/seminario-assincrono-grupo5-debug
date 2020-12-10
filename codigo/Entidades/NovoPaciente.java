@@ -6,14 +6,10 @@ public class NovoPaciente extends Pessoa{
         private String sintomas;
         private NivelUrgencia urgencia;
 
-        public Paciente(String nome, String cpf, LocalDate nascimento, String sintomas, NivelUrgencia urgencia) {
+        public NovoPaciente(String nome, String cpf, LocalDate nascimento, String sintomas, NivelUrgencia urgencia) {
             super(nome, cpf, nascimento);
             this.sintomas = sintomas;
             this.urgencia = urgencia;
-        }
-
-        public Paciente() {
-            super();
         }
 
         public String getSintomas() {
@@ -41,4 +37,3 @@ public class NovoPaciente extends Pessoa{
         }
     }
 
-}

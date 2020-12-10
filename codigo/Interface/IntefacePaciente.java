@@ -1,15 +1,15 @@
 package Interface;
-import Entidades.Paciente;
+import Entidades.NovoPaciente;
 
 import java.io.IOException;
 import java.util.List;
 
 public interface IntefacePaciente {
 
-    public boolean addPaciente(Paciente paciente) throws IOException, ClassNotFoundException;
+    public boolean addPaciente(NovoPaciente paciente) throws IOException, ClassNotFoundException;
     public boolean RemovePaciente(String cpf)throws IOException, ClassNotFoundException;
-    public boolean atualizarPaciente(String cpf, Paciente paciente)throws IOException, ClassNotFoundException;
-    public Paciente buscarPacienteCpf(String cpf)throws IOException, ClassNotFoundException;
-    public List<Paciente> listarPaciente()throws IOException, ClassNotFoundException;
+    public boolean atualizarPaciente(String cpf, NovoPaciente paciente)throws IOException, ClassNotFoundException;
+    public NovoPaciente buscarPacienteCpf(String cpf)throws IOException, ClassNotFoundException;
+    public List<NovoPaciente> listarPaciente()throws IOException, ClassNotFoundException;
 
 }
